@@ -40,93 +40,37 @@ class Results extends JFrame{
 }
 
 public class PifagorMain extends JFrame {
-//	static JPanel makeBPannel(Class<? extends AbstractButton> kind, String[] ids) {
-//		ButtonGroup bg = new ButtonGroup();
-//		JPanel jp = new JPanel();
-//		String title = kind.getName();
-//		title = title.substring(title.lastIndexOf('.') + 1);
-//		for (String id : ids) {
-//			AbstractButton ab = new JButton("failed");
-//			try {
-//				Constructor ctor = kind.getConstructor(String.class);
-//				ab = (AbstractButton) ctor.newInstance(id);
-//			} catch (Exception ex) {
-//				System.err.println("can't create " + kind);
-//			}
-//			bg.add(ab);
-//			jp.add(ab);
-//		}
-//		return jp;
-//	}
-
 	JTextField name = new JTextField(10);
 	private JTextField date = new JTextField(2);
 	private JTextField month = new JTextField(2);
 	private JTextField year = new JTextField(4);
 	private JTextArea resultPifagor = new JTextArea(2, 18);
-	//private JTextArea resultZvezda = new JTextArea(20, 15);
 	private JTextArea results = new JTextArea(5, 10);
 	private JButton ZvezdaButton = new JButton("Звезда");
 	private JButton PifagorButton = new JButton("Пифагор");
-	//private JTable table = new JTable(7, 4);
-	
+		
 	private JMenu File = new JMenu ("File"); 
 	private JMenu Help = new JMenu ("Help");
 	private JMenuItem info = new JMenuItem("О нас");
 	private JMenuItem Clear = new JMenuItem("Очистить");
 	
-	//private Image imagr;
 	private Image pifagorPic;
 	private int[] chislaZvezdy;
-	//private JLabel zvezdaPic2;
 	Image image1;
 	public Map<Integer, Integer> PifMap;
-	//BufferedImage imagr = ImageIO.read(this.getClass().getResource("zvezda.png"));
 	
 ////////////////////////////////////
-	
-
-	
-
-
-	
-	
-
-	
-
-	
-	public PifagorMain() throws IOException {
+		public PifagorMain() throws IOException {
 
 		ZvezdaButton.addActionListener(ZvezdaListener);
 		PifagorButton.addActionListener(PifagorListener);
-		// JPanel main = new JPanel();
-		// main.add(new JLabel("Расчет квадрата пифагора"));
 		JMenuBar menubar = new JMenuBar();
 		menubar.add(File);
 		menubar.add(Help);
 		Help.add(info);
 		File.add(Clear);
-		//setJMenuBar(menubar);
 		JPanel top = new JPanel();
 		
-//		imagr = ImageIO.read(new File("zvezda_pod_otvet.png"));
-//		image1 = ImageIO.read(new File("zvezda_pod_otvet400.png"));
-//		
-//		
-//		Image original = imagr;
-//		imagr = original.getScaledInstance(300, -1, Image.SCALE_DEFAULT);
-//		
-//		//top.add(wIcon);
-//		//JLabel zvezdaPic = new JLabel(new ImageIcon(imagr));
-//		BufferedImage im = (BufferedImage) original;
-//		Graphics2D gZvezda = im.createGraphics();
-//		Image im2 = im;
-//		
-		//zvezdaPic2 = Zvezda.fillZvezdu(original, chislaZvezdy);
-		
-		//JLabel zvezdaPic2 = new JLabel(new ImageIcon(im2));
-		
-		// top.add(makeBPannel(JCheckBox.class, daysSet));
 		top.add(new JLabel("Имя: "));
 		top.add(name);
 		top.add(new JLabel("День:"));
@@ -138,33 +82,14 @@ public class PifagorMain extends JFrame {
 		top.add(ZvezdaButton);
 		top.add(PifagorButton);
 		Dimension dim = new Dimension(590, 400);
-		//top.setMinimumSize(dim);
+
 		top.setSize(590, 40);
 		top.setLocation(0, 0);
-	//	top.add(zvezdaPic);
+
 		add(BorderLayout.NORTH , top);
-		
-	//	Border brd = BorderFactory.createMatteBorder(1, 1, 2, 2, Color.LIGHT_GRAY);
 		Border brd2 = BorderFactory.createMatteBorder(5, 5, 5, 5, Color.white);
 		
 		setMinimumSize(dim);
-		//JPanel kvadrat = new JPanel();
-		//kvadrat.setLayout(new BorderLayout());
-		//kvadrat.setBorder(new TitledBorder("Квадрат Пифагора"));
-		//kvadrat.setSize(200, 200);
-		//kvadrat.setLocation(0, 60);
-		//resultPifagor.setBorder(brd);
-		//kvadrat.add(BorderLayout.NORTH, resultPifagor);
-		
-		//table.setFocusable(true);
-		//table.setLocation(0, 90);
-		//table.setLayout(new BorderLayout());
-		//kvadrat.add(table);
-		//add(BorderLayout.WEST, kvadrat);
-		
-		
-		
-		
 		results.setEditable(false);
 		resultPifagor.setEditable(false);
 		JPanel zvezdaPanel = new JPanel();
@@ -174,8 +99,7 @@ public class PifagorMain extends JFrame {
 		zvezdaPanel.setBorder(new TitledBorder("Описание"));
 		zvezdaPanel.add(resultsPane);
 		add(BorderLayout.CENTER, zvezdaPanel);
-		
-		
+
 //		date.setText("25");
 //		month.setText("12");
 //		year.setText("1980");

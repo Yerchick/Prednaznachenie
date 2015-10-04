@@ -106,45 +106,7 @@ public class Pifagor {
 		result = sumMap(result, birthDate2Sum);
 		return result;
 	}
-//	private static void createAndShowGUI()  {
-//		
-//		JFrame fr = new JFrame("Расчет квадрата пифагора");
-//		
-//		JLabel label = new JLabel("Введите дату рождения");
-//		JButton b1 = new JButton("Рассчитать!");
-//		JTextField txt = new JTextField(100);
-//		JTextField txtDay = new JTextField(2);
-//		JTextField txtMonth = new JTextField(2);
-//		JTextField txtYear = new JTextField(4);
-//		
-//		fr.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//		fr.getContentPane().add(label);
-//		
-//		fr.add(txtDay);
-//		fr.add(txtMonth);
-//		fr.add(txtYear);
-//		fr.add(b1);
-//		fr.add(txt);
-//		fr.pack();
-//		fr.setSize(300, 200);
-//		fr.setVisible(true);
-//		
-//	//	TimeUnit.SECONDS.sleep(1);
-//		//	label.setText("Something new :)");
-//	}
-//	class ButtonListener implements ActionListener {
-//		
-//			
-//		public void actionPerformed(ActionEvent e) {
-//			
-//				/*	String text = 
-//					Pifagor.class
-//							txt.setText(text); */
-//			
-//		}
-//	}
-//	ButtonListener bl = new ButtonListener();
-//	
+
 //////////////////////////////////////////////////////////////////	
 //	public static void main(String[] args)throws Exception{
 //		int day = 7;
@@ -155,11 +117,6 @@ public class Pifagor {
 //		new TreeMap<Integer, Integer>();
 //		map1 = Pifagor(day,month,year);
 //		print(map1);
-//		
-		
-		 
-		
-		
-		
+//			
 //	}
 }
